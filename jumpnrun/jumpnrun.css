@@ -1,0 +1,29 @@
+body {
+	margin : 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+#bg {
+	background-image: url("jumpnrun.jpg");
+	background-repeat: repeat-x;
+	background-size: cover;
+	width: 100vw;
+	height: 50vw;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: fixed;
+	/* position:relative;  /* to prevent scrollbars from appearing */
+}
+
+.obstacle {
+	width:5vw;
+	height:5vw;
+	background-image: url("obstacle.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position:absolute;
+}

@@ -1,0 +1,24 @@
+body {
+	margin : 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	color:#aaa;
+	display : flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#gamecontainer {
+	margin: auto;
+}
+
+#gamecontainer td {
+	--td-size: min(5vw, 5vh);
+	width: var(--td-size);
+	height: var(--td-size);
+	background-color:#333;
+}
+

@@ -1,0 +1,45 @@
+body {
+	margin : 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#game {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+}
+
+.karte {
+	/* CSS Variable */
+	--karten-size: min(15vw, 15vh); /* Min 6 Karten in jede Richtung */
+	margin: calc(var(--karten-size)/15);
+	width: var(--karten-size);
+	height: var(--karten-size);
+	font-size: calc(var(--karten-size)/2);
+	border-radius: calc(var(--karten-size)/5);
+	border-width: medium;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.inhalt {
+	width: fit-content;
+	margin-left: auto;
+    margin-right: auto;
+	
+}
+
+.verdeckt {
+	background-color: gray;
+	color: gray;
+}
+
+.offen {
+	background-color:yellow;
+	color:black;
+}
+
