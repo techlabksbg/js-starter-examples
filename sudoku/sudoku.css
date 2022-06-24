@@ -1,0 +1,93 @@
+body {
+	margin : 0;   /* Kein Rand */
+	padding: 0;
+	width: 100vw;  /* Full window */
+	height: 100vh;  
+	overflow: hidden;  /* Keine Scrollbars */ 
+}
+
+
+/* https://stackoverflow.com/questions/29307971/css-grid-of-squares-with-flexbox  */
+
+#game {
+	width: min(80vw, 80vh);  /* Quadrat muss platz haben */
+	aspect-ratio: 1 / 1 ;    /* Muss ein Quadrat sein (gleiche height) */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	padding:0;
+	margin-left: 10vw;
+	margin-top: 10vh;
+}
+
+.neunerblock {
+	width: calc( 33.33% - 6px );  /* Platz für 3 (minus Rand) */
+	margin: -3px;          /* Überlappende Ränder  */
+	border-width: 6px;
+	padding: 0;
+	aspect-ratio: 1 / 1 ;
+	display:flex;
+	flex-wrap:wrap;
+	border-style:solid;
+	align-content:space-around;
+	align-items: center;
+}
+
+.eintrag {
+	font-size: calc(0.07 * min(80vw, 80vh)); /* Responsive font-groesse */
+	display:flex;
+	justify-content: center;
+	align-content:space-around;
+	align-items: center;
+	text-align: center;
+	width:33.33%;
+	margin:-1px;
+	border-width:1px;
+	border-style:solid;
+	aspect-ratio: 1 / 1 ;
+	font-family: sans-serif;
+	user-select: none;
+}
+
+.fixiert {
+	font-size: calc(0.09 * min(80vw, 80vh));
+	font-weight: bold;
+	font-family: serif;
+}
+
+
+#numberpad {
+	position:absolute;
+	left:10vw;
+	top:10vh;
+	width: min(20vw, 20vh);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	padding:0;
+	border-radius:min(5vw, 5vh);
+	background-color: #ddddff88;
+	padding:min(2vw, 2vh);
+	display: none;
+}
+
+#numberpad > div {
+	width: 25%;
+	aspect-ratio: 1 / 1 ;
+	margin:3%;
+	background-color: #ffffbb;
+	border-radius:8%;
+	border-color:#777777;
+	font-size: min(5vw, 5vh);
+	display:flex;
+	justify-content: center;
+	align-content:space-around;
+	align-items: center;
+	text-align: center;
+	box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45); /* From https://stackoverflow.com/questions/49653136/css-glassy-slightly-folded-borders-3d-effect */
+}
+
